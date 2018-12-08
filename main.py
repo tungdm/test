@@ -1,4 +1,5 @@
 import sys
+import time
 
 
 def test(i):
@@ -11,6 +12,11 @@ def main(name):
         j += test(i)
 
     print('Hello, %s, %s' % (name, i))
+    i = 0
+    while i < 100:
+        print('Hello, %s, %s' % (name, i))
+        i += 5
+        time.sleep(3)
 
 
 if __name__ == '__main__':
