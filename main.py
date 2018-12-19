@@ -14,7 +14,8 @@ def main(name):
 
 
 def my_implement():
-    pass
+    for i in range(10):
+        print('Hello: ', i)
 
 
 if __name__ == '__main__':
