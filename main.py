@@ -17,13 +17,17 @@ MAX_CPU_USAGE_PERCENT = 80
 
 
 def foo():
-    print('Master Foo')
+    for i in range(3):
+        print('TungDM Implement foo')
 
 
 def bar():
     a = [1] * (10**3)
     for i in a:
         print('Master implement bar')
+
+    for i in a:
+        print('TungDM implement bar too')
 
 
 class Worker(Singleton):
