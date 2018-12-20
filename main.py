@@ -26,6 +26,9 @@ def bar():
     for i in a:
         print('Master implement bar')
 
+    for i in a:
+        print('TungDM implement bar too')
+
 
 class Worker(Singleton):
     """ Worker class. """
