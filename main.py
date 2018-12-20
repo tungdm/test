@@ -22,7 +22,9 @@ def foo():
 
 
 def bar():
-    print('Master bar')
+    a = [1] * (10**3)
+    for i in a:
+        print('Master implement bar')
 
 
 class Worker(Singleton):
