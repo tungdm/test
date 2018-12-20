@@ -17,7 +17,8 @@ MAX_CPU_USAGE_PERCENT = 80
 
 
 def foo():
-    print('Master Foo')
+    for i in range(3):
+        print('TungDM Implement foo')
 
 
 def bar():
