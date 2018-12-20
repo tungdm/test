@@ -16,6 +16,10 @@ MESSAGES_PER_WORKER = 5
 MAX_CPU_USAGE_PERCENT = 80
 
 
+def foo():
+    print('Master Foo')
+
+
 class Worker(Singleton):
     """ Worker class. """
 
