@@ -21,24 +21,19 @@ class Worker(Singleton):
 
     def __init__(self):
         print('====> Worker is starting...')
-        # self.__binding_to_user_queue()
-        # self.__init_subscribers()
-
-    def my_implement():
-        for i in range(10):
-            print('Hello: ', i)
+        self.__binding_to_user_queue()
+        self.__init_subscribers()
 
     def binding_to_user_queue(self):
         """ Binding to user queue when start worker. """
-        print('Binding to user queue when startup')
         rabbit = Rabbit()
         rabbit.subscribe(self.__callback)
-        print('===> Unsubscribe done.')
 
     def __callback(self, channel, method, properties, body):
         """ Callback function used to init subscriber. """
-        print('method: ', method)
-        print('properties: ', properties)
+        for i in range(3):
+            print('method: ', method)
+            print('properties: ', properties)
         data = json.loads(body.decode('utf-8'))
         user = data.get('user')
         total_messages = data.get('total_messages')
@@ -67,7 +62,12 @@ class Worker(Singleton):
             print('\tStart ', thread_name)
             rabbit = Rabbit()
             # TODO: substract redis count_worker by 1
-
+            for i in range(3):
+                print('New features')
+                print('New features')
+                print('New features')
+                print('New features')
+                print('New features')
             rabbit.subscribe(callback=self.__process_data,
                              queue=queue, auto_delete=True)
             print('===> %s - Unsubscribe done.' % thread_name)
