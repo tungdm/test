@@ -20,6 +20,10 @@ def foo():
     print('Master Foo')
 
 
+def bar():
+    print('Master bar')
+
+
 class Worker(Singleton):
     """ Worker class. """
 
