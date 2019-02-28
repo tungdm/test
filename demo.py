@@ -1,2 +1,3 @@
 def foo():
-    print('Foo')
+    for i in range(10):
+        print(i)
