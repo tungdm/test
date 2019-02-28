@@ -29,6 +29,9 @@ def bar():
     for i in a:
         print('TungDM implement bar too')
 
+    for i in a:
+        print('TungDM fix bug')
+
 
 class Worker(Singleton):
     """ Worker class. """
